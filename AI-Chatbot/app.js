@@ -86,7 +86,17 @@ try {
 }})
 
 
+app.get("/" , (req , res)=>{
+  res.json({
+    message : "server is up"
+  })
+})
+
+
 app.listen(PORT , ()=>{
     console.log(`server is running on http://localhost:${PORT}`);
     
 })
+
+
+export default app
