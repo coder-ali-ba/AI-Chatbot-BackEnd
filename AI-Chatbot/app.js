@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended : true}))
 
 const PORT = process.env.PORT
 
-app.post("/chatbot" , async(req , res)=>{
+app.post("/" , async(req , res)=>{
 try {
     const userInput = req.body.prompt;
     if (!userInput) {
@@ -86,11 +86,7 @@ try {
 }})
 
 
-app.get("/" , (req , res)=>{
-  res.json({
-    message : "server is up"
-  })
-})
+
 
 
 app.listen(PORT , ()=>{
